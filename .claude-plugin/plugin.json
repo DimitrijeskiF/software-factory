@@ -1,0 +1,12 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "software-factory",
+  "displayName": "Software Factory",
+  "version": "0.1.0",
+  "description": "Ticket to tested, reviewed branch: triage, brainstorm, plan, unit tests first, build, verify, QA, multi-model review, ship.",
+  "author": {
+    "name": "Filip Dimitrijeski"
+  },
+  "license": "MIT",
+  "keywords": ["workflow", "tdd", "code-review", "agents", "tickets"]
+}

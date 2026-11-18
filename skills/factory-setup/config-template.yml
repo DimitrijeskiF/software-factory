@@ -1,0 +1,45 @@
+# Software Factory config for this project.
+# Written by /factory-setup; safe to edit by hand.
+# Keep the layout flat: unindented "section:" lines, then indented "key: value" lines.
+# A trailing " # comment" is ignored. Leave a value empty to turn that item off.
+
+project:
+  name: my-app
+  stack: TypeScript, React, Vitest
+  notes: Commands run from the repo root.
+
+commands:
+  install: npm ci
+  test: npm test
+  test_one: npx vitest run {file}   # {file} is replaced with one test file path
+  lint: npm run lint
+  typecheck: npx tsc --noEmit
+  build: npm run build
+  coverage:
+
+tests:
+  patterns: "**/*.test.ts **/*.test.tsx **/*.spec.ts tests/**"   # space-separated git globs
+
+models:   # sonnet | opus | haiku | fable
+  triage: sonnet
+  spec_writer: opus
+  planner: opus
+  test_writer: sonnet
+  builder: opus
+  verifier: sonnet
+  qa: sonnet
+  reviewer: opus
+  security_reviewer: sonnet
+  finding_checker: opus
+  shipper: haiku
+  learner: haiku
+
+review:
+  external: auto   # auto | codex | gemini | off
+
+limits:
+  max_fix_rounds: 3
+  command_timeout_sec: 900
+
+git:
+  branch_prefix: factory/
